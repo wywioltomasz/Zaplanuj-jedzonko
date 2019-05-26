@@ -1,0 +1,1 @@
+console.log("U mnie działa;p");
