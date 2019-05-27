@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+.app_content{               //wymiary są wstępne, a kolor zgadza się z tym co widać na makiecie z UXPin
+  width: 1000px;            //Trzeba to jeszcze spozycjonować w tym co robi Nikola
+  height: 800px;
+  border: 1px dashed rgb(161, 161, 148);
+}
+
+.first_entry {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 407px;
+  height: 309px;
+  font-family: 'Open sans', Arial, sans-serif;
+  color: #5B605F;
+  text-align: center;
+  font-weight: bold;
+
+  > h1 {
+    font-size: 36px;
+  }
+
+  > p {
+    font-size: 24px;
+    margin: 10px auto;
+
+    &:last-child {
+      font-size: 20px;
+    }
+  }
+
+  #input_name {
+    width: 292px;
+    height: 30px;
+    padding: 0 10px;
+    font-size: 14px;
+  }
+
+  #submit_name {
+    width: 126px;
+    height: 36px;
+    display: block;
+    margin: 10px auto;
+    font-size: 20px;
+    font-family: Arial, 'Open sans', sans-serif;
+    font-weight: bold;
+    background: #FF6600;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+  }
+}
