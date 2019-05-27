@@ -3,10 +3,15 @@
 //
 // Sass:
 // https://fontawesome.com/how-to-use/on-the-web/using-with/sass
-@import "../sass/recipes";
 body{
   background-color: #BADA55;
 }
+.app_content{               //wymiary są wstępne, a kolor zgadza się z tym co widać na makiecie z UXPin
+  width: 1000px;            //Trzeba to jeszcze spozycjonować w tym co robi Nikola
+  height: 800px;
+  border: 1px dashed rgb(161, 161, 148);
+}
+
 .title {
   margin: 0 auto;
   width: 85%;
