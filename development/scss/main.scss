@@ -3,8 +3,38 @@
 //
 // Sass:
 // https://fontawesome.com/how-to-use/on-the-web/using-with/sass
-
-
+@import "../sass/recipes";
 body{
   background-color: #BADA55;
+}
+.title {
+  margin: 0 auto;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+}
+.recipes {
+  display: flex;
+  justify-content: center;
+  table , td, th {
+    border: 1px black solid;
+  }
+  table{
+    width: 80%;
+    .id {
+      width: 10%;
+    }
+    .name {
+      width: 15%;
+    }
+    .opis {
+      width: 40%;
+    }
+    .action {
+      width: 15%;
+    }
+    .week {
+      width: 15%;
+    }
+  }
 }
