@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var submitName = document.getElementById('submit_name');          //Znajduję input imienia
     var inputName = document.getElementById('input_name');            //Znajduję button wysyłający imię z inputu
     var userName = document.getElementById('user_name');            //Imię w headerze aplikacji, póki co dorzuciłem je jako paragraf, żeby testować funkcjonalność. Jak Nikola skończy header, to poprawię
-    console.log(inputName.value);
+
+    //console.log(inputName.value);
 
 
     submitName.addEventListener('click', function (event) {
