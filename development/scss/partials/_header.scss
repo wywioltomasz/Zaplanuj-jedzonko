@@ -1,0 +1,51 @@
+// CDN FONTAWESOME
+// <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+//
+// Sass:
+// https://fontawesome.com/how-to-use/on-the-web/using-with/sass
+
+@import url('https://fonts.googleapis.com/css?family=Charmonman');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+header {
+  background-color: #292F32;
+  width: 100vw;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logo {
+  font-size: 32px;
+  width: 40%;
+  h1 {
+    font-family: Charmonman;
+  }
+  #logo__first {
+    font-weight:100;
+    color: white;
+  }
+  #logo__second {
+    color: #E58A20;
+    font-weight: 700;
+  }
+}
+
+.menu__list {
+  list-style: none;
+  li {
+    display: inline-block;
+    a {
+      font-size: 20px;
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-left: 50px;
+      &:hover {
+        color: #E58A20;
+      }
+    }
+  }
+}
+
