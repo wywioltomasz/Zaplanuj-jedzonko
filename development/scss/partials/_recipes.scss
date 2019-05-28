@@ -1,12 +1,5 @@
 
-.main_box{
-  width: 1040px;
-  height: 690px;
-  border: 1px dashed #a1a194;
-  margin-left: 100px;
-  margin-top: 50px;
-  font-family: Opensans;
-  background-color: #FFFFFA;
+.app_content{
   padding: 20px 35px;
 }
 
@@ -24,7 +17,7 @@
     color: #468966;
     position: absolute;
     left: 97%;
-    top: 5%;
+    bottom: 10%;
   }
   &:after {
     content: '';
