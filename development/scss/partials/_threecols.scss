@@ -1,2 +1,37 @@
-$main-width: 85%;
-
+$main-width: 75%;
+.columns_box {
+  background-color: #ebebeb;
+  color: #4a4a49;
+  height: 80vh;
+  width: 100%;
+  .main-width {
+    margin: 0 auto;
+    width: $main-width;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    .column {
+      width: 24%;
+      h3 {
+        font-weight: 100;
+        font-size: 2em;
+        margin-bottom: 10px;
+        width: 105%;
+        margin-left: -5px;
+      }
+      p {
+        font-size: 1.5em;
+        color: #5b605f;
+        margin-top: 10px;
+        padding-bottom: 20px;
+      }
+    }
+    .icon {
+      font-size: 90px;
+      color: #a1a194;
+      margin-bottom: 20px;
+    }
+  }
+}
