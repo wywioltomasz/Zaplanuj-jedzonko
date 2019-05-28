@@ -1,0 +1,70 @@
+@mixin bottomBorder {
+  & {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #CBCBCB;
+  }
+}
+
+.newrecipe {
+  margin: 20px auto;
+  width: 90%;
+  height: 90%;
+
+  .newrecipe_header {
+    display: flex;
+    justify-content: space-between;
+    @include bottomBorder;
+
+    .app_content_header {
+      font-size: 24px;
+      color: $appHeaderFontColor;
+      text-transform: uppercase;
+    }
+
+    #save_recipe {
+      background: $appHeaderFontColor;
+      width: 148px;
+      height: 33px;
+      font-size: 16px;
+      font-weight: 700;
+      color: white;
+      border: none;
+    }
+
+  }
+
+  .container {
+    width: 96%;
+    margin: 0 auto;
+
+    .recipe_info {
+      font-size: 24px;
+      color: $navigBackgroundColor;
+      margin: 10px 0;
+
+      span {
+        width: 200px;
+        display: inline-block;
+      }
+
+      input {
+        width: 626px;
+        height: 30px;
+        font-family: 'Open sans', Arial, sans-serif;
+      }
+      textarea{
+      width: 626px;
+        font-size: 14px;
+        line-height: 18px;
+        max-height: 100px;
+        font-family: 'Open sans', Arial, sans-serif;
+      }
+      &:nth-child(2){
+        span{
+          transform:translate(0,-217%)
+        }
+      }
+
+    }
+  }
+}

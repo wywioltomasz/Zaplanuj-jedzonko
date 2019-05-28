@@ -4,9 +4,11 @@
 // Sass:
 // https://fontawesome.com/how-to-use/on-the-web/using-with/sass
 @import "partials/reset";
+@import 'partials/_variables.scss';
 @import "partials/fonts";
 @import 'partials/firstentry';
 @import  "partials/mainpage";
+@import 'partials/addrecipe';
 
 
 
