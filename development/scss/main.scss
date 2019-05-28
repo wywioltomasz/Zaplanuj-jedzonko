@@ -1,10 +1,4 @@
-// CDN FONTAWESOME
-// <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-//
-// Sass:
-// https://fontawesome.com/how-to-use/on-the-web/using-with/sass
-<<<<<<< HEAD
-=======
+@import "partials/recipes";
 @font-face {
   src: url(../fonts/charmonman-regular-webfont.woff);
   font-family: "Charmonman";
@@ -13,145 +7,11 @@
   src: url("../fonts/opensans-regular-webfont.woff");
   font-family: "Opensans";
 }
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
->>>>>>> master
-body{
-  background-color: #b0b0ab;
-}
-.main_width{
-  width: 1400px;
-  height: 1000px;
-  margin: 0 auto;
-}
-<<<<<<< HEAD
-.app_content{               //wymiary są wstępne, a kolor zgadza się z tym co widać na makiecie z UXPin
-  width: 1000px;            //Trzeba to jeszcze spozycjonować w tym co robi Nikola
-  height: 800px;
-  border: 1px dashed rgb(161, 161, 148);
-}
-
-.title {
-  margin: 0 auto;
-  width: 85%;
-  display: flex;
-  justify-content: space-between;
-}
-.recipes {
-  display: flex;
-  justify-content: center;
-  table , td, th {
-    border: 1px black solid;
-  }
-  table{
-    width: 80%;
-    .id {
-      width: 10%;
-    }
-    .name {
-      width: 15%;
-    }
-    .opis {
-      width: 40%;
-    }
-    .action {
-      width: 15%;
-    }
-    .week {
-      width: 15%;
-    }
-  }
-}
-=======
-header{
-  height: 100px;
-  width: 100%;
-  background-color: #292F32;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 30px;
-  padding-right: 100px;
-}
-.first,.second{
-  font-family: "Charmonman", sans-serif;
-}
-.first{
-  font-weight:100;
-  color: white;
-}
-.second{
-  color:#E58A20;
-  font-weight: 700;
-}
-.user{
-  color: white;
-}
-//I must go back for main login
-
-section{
-  display: flex;
-  flex-direction: row;
-}
-.left_side_nav{
-  width: 300px;
-  background-color: #5B605F;
-  height: 900px;
-}
-.nav_box{
-  width: 300px;
-  height: 70px;
-  display: flex;
-  flex-direction: row;
-}
-//.orange_sideline{
-//  height: 70px;
-//  width: 5px;
-//  background-color: #E58A20;
-//}
-.button{
-  height: 70px;
-  width: 270px;
-  background-color: #5B605F;
-  color: white;
-  padding-left: 30px;
-  font-size: 25px;
-  font-weight: bold;
-  font-family: "Opensans",sans-serif;
-  text-align: left;
-  border: none;
-  letter-spacing: 1px;
-}
-.button:hover {
-  background-color: #292F32;
-  border-left: 7px solid #E58A20;
-}
-//.arrow{
-//  height: 70px;
-//  width: 25px;
-//  background-color: #5B605F;
-//  color: #E58A20;
-//  font-size: 30px;
-//  font-weight: bolder;
-//  padding-top: 15px;
-//}
-.background{
-background-image:url("../images/background.jpg");
-width: 1100px;
-height: 900px;
-}
-.main_box{
-  width: 1000px;
-  height: 850px;
-  border: 1px dotted black;
-  margin-left: 100px;
-  margin-top: 50px;
-}
 
 
 
-
->>>>>>> master
