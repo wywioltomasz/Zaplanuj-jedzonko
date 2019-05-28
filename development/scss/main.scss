@@ -1,17 +1,14 @@
+// CDN FONTAWESOME
+// <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+//
+// Sass:
+// https://fontawesome.com/how-to-use/on-the-web/using-with/sass
+@import "partials/reset";
+@import "partials/fonts";
+@import 'partials/firstentry';
+@import  "partials/mainpage";
+@import "partials/header";
 @import "partials/recipes";
-@font-face {
-  src: url(../fonts/charmonman-regular-webfont.woff);
-  font-family: "Charmonman";
-}
-@font-face {
-  src: url("../fonts/opensans-regular-webfont.woff");
-  font-family: "Opensans";
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 
 
