@@ -1,7 +1,10 @@
 .about {
-  width: 100vw;
   background-color: #EBEBEB;
   color: black;
+}
+.main-width {
+  margin: 0 auto;
+  width: 75%;
   display: flex;
   flex-wrap: wrap;
   padding: 30px;
@@ -19,7 +22,7 @@
     width: 60%;
     margin: 25px 60px;
     h2 {
-      padding-bottom: 10px;
+      padding-bottom: 30px;
       font-weight: normal;
       font-size: 1.8rem;
     }
