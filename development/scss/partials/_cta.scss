@@ -1,15 +1,19 @@
-.cta {
-  width: 100vw;
-  background-color: #4A4A49;
+.main__width {
+  width: 85%;
   color: white;
   display: flex;
   flex-wrap: wrap;
-  padding: 25px;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
+}
+
+.cta {
+  width: 100vw;
+  background-color: #4A4A49;
   .cta__description {
     width: 65%;
-    margin: 20px 0;
+    margin: 25px 0;
     h3 {
       padding-bottom: 15px;
       font-weight: normal;
@@ -17,7 +21,7 @@
     }
   }
   .cta__button {
-    margin: 20px 0;
+    margin: 25px 0;
     button {
       color: white;
       font-weight: bold;
