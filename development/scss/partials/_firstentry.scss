@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
-.app_content { //wymiary są wstępne, a kolor zgadza się z tym co widać na makiecie z UXPin
-  width: 1000px; //Trzeba to jeszcze spozycjonować w tym co robi Nikola
-  height: 800px;
-  border: 1px dashed rgb(161, 161, 148);
-  font-family: 'Open sans', Arial, sans-serif;
+.app_content {
+  width: 1040px;
+  height: 690px;
+  border: 1px dashed #a1a194;
+  margin-left: 100px;
+  margin-top: 50px;
+  background-color: #FFFFFA;
 }
 
 .first_entry {
@@ -12,6 +14,7 @@
   margin-top: 50px;
   width: 407px;
   height: 309px;
+  font-family: 'Open sans', Arial, sans-serif;
   color: #5B605F;
   text-align: center;
   font-weight: bold;
