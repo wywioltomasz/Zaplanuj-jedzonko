@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (newInstruction.value.length > 150) {
                 alertBox.innerHTML = "Element instrukcji nie powinien byc dłuższy niż 150 znaków";
             } else {
+                alertBox.innerHTML = "";
                 var newLi = document.createElement('LI');
 
                 newLi.innerHTML = newInstruction.value + '<i class="fas fa-edit edit"></i><i class="far fa-trash-alt bin"></i>';
@@ -85,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
                 var newEdit = newLi.querySelector('.edit');                         //dodaję edycję instrukcji
 
-                newEdit.addEventListener('click', function (event) {
+                newEdit.addEventListener('click', function editListElement(event) {
                     var editingBox = document.createElement('input');
                         editingBox.classList.add("edit_box");
                         this.parentElement.appendChild(editingBox);
@@ -93,17 +94,20 @@ document.addEventListener('DOMContentLoaded', function () {
                     editingBox.value = this.parentElement.innerText;
                     editingBox.addEventListener('blur', function(event){
                         if(this.value.length < 50){
-                            console.log(editingBox.parentElement);
-                            editingBox.parentElement.innerHTML = editingBox.outerHTML + this.value + '<i class="fas fa-edit edit"></i><i class="far fa-trash-alt bin"></i>';
-                            console.log(this);
-                            console.log(this.parentElement);
-                            console.log(this.parentNode)
+
+                            var parent = this.parentElement;
+                            console.log(parent);
+                            editingBox.parentElement.innerHTML = this.value + '<i class="fas fa-edit edit"></i><i class="far fa-trash-alt bin"></i>';
+
+                            parent.querySelector('.bin').addEventListener('click', function (event) {
+                                this.parentElement.parentElement.removeChild(this.parentElement);
+                            });
+                            parent.querySelector('.edit').addEventListener('click', editListElement)
+
+                        }else{
+                            alertBox.innerText = "Element instrukcji nie powinien byc dłuższy niż 150 znaków"
                         }
                     });
-
-
-
-
                 });
                 instructions = instructionList.children;            //zbieram instrukcje w pseudolistę
                 // console.log(instructions);
@@ -115,8 +119,9 @@ document.addEventListener('DOMContentLoaded', function () {
     addIngredient.addEventListener('click', function (event) {    //dodawanie składnika do listy
         if (newIngredient.value !== "") {
             if (newIngredient.value.length > 50) {
-                alertBox.innerHTML = "Opis składnik nie powinien byc dłuższy niż 150 znaków";
+                alertBox.innerHTML = "Opis składnika nie powinien byc dłuższy niż 50 znaków";
             } else {
+                alertBox.innerHTML = "";
                 var newLi = document.createElement('LI');
 
                 newLi.innerHTML = newIngredient.value + '<i class="fas fa-edit edit"></i><i class="far fa-trash-alt bin"></i>';
@@ -126,6 +131,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     this.parentElement.parentElement.removeChild(this.parentElement);
 
+                });
+                var newEdit = newLi.querySelector('.edit');                         //dodaję edycję instrukcji
+
+                newEdit.addEventListener('click', function editListElement(event) {
+                    var editingBox = document.createElement('input');
+                    editingBox.classList.add("edit_box");
+                    this.parentElement.appendChild(editingBox);
+
+                    editingBox.value = this.parentElement.innerText;
+                    editingBox.addEventListener('blur', function(event){
+                        if(this.value.length < 150){
+
+                            var parent = this.parentElement;
+                            editingBox.parentElement.innerHTML = this.value + '<i class="fas fa-edit edit"></i><i class="far fa-trash-alt bin"></i>';
+
+                            parent.querySelector('.bin').addEventListener('click', function (event) {
+                                this.parentElement.parentElement.removeChild(this.parentElement);
+                            });
+                            parent.querySelector('.edit').addEventListener('click', editListElement)
+
+                        }else{
+                            alertBox.innerText = "Opis składnika nie powinien byc dłuższy niż 150 znaków"
+                        }
+                    });
                 });
 
 
