@@ -1,0 +1,32 @@
+.cta {
+  width: 100vw;
+  background-color: #4A4A49;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px;
+  justify-content: space-evenly;
+  align-items: center;
+  .cta__description {
+    width: 65%;
+    margin: 20px 0;
+    h3 {
+      padding-bottom: 15px;
+      font-weight: normal;
+      font-size: 2rem;
+    }
+  }
+  .cta__button {
+    margin: 20px 0;
+    button {
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      border: none;
+      width: 160px;
+      height: 40px;
+      background-color: #FF6600;
+      cursor: pointer;
+    }
+  }
+}
