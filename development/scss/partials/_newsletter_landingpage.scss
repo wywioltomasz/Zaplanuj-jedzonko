@@ -1,0 +1,33 @@
+.newsletter_section{
+  width: 100vw;
+  height: 70px;
+  background-color: #5B605F;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.newsletter_section h3{
+  font-size: 30px;
+  font-weight: lighter;
+  font-family: 'Open sans', Arial, sans-serif;
+  padding-left: 60px;
+}
+.newsletter_section form{
+  align-items: center;
+  display: flex;
+  padding-right: 60px;
+}
+.text_area{
+  outline: none;
+  resize: none;
+}
+.submit{
+  height: 32px;
+  width: 250px;
+  font-size: 20px;
+  background-color: #FF6600;
+  border-style: none;
+  color: white;
+}
