@@ -2,6 +2,15 @@
 .app_content{
   padding: 20px 35px;
 }
+i {
+  cursor: pointer;
+&.edit {
+  color: #ffb03b;
+}
+  &.bin {
+    color: #bd4932;
+  }
+}
 
 .title {
   text-transform: uppercase;
@@ -81,15 +90,9 @@
         font-size: 1.5em;
         padding-left: 15px;
       }
-      .edit {
-        color: #ffb03b;
-      }
-      .bin {
-        color: #bd4932;
-      }
+
 
     }
   }
 }
-
 

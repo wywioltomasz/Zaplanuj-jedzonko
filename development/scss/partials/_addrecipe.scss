@@ -36,6 +36,13 @@
       color: white;
       border: none;
       cursor: pointer;
+
+    }
+    .alert-box{
+      width: 510px;
+      height: 28px;
+      color: red;
+      //border: 1px solid #cbcbcb;
     }
 
   }
@@ -53,20 +60,20 @@
       margin: 10px 0;
 
       span {
-        width: 230px;
+        width: 210px;
         display: inline-block;
         letter-spacing: 2px;
       }
 
       input {
-        width: 626px;
+        width: 620px;
         height: 30px;
         font-family: 'Open sans', Arial, sans-serif;
         padding-left: 5px;
       }
 
       textarea {
-        width: 626px;
+        width: 620px;
         font-size: 14px;
         line-height: 18px;
         max-height: 100px;
@@ -96,7 +103,7 @@
         @include bottomBorder;
       }
 
-      textarea, input{
+      textarea, input {
         width: 85%;
         resize: none;
         display: inline-block;
@@ -118,14 +125,22 @@
 
       .list_container {
         width: 90%;
-        height: 75%;
+        height: 72%;
         transform: translate(10%, 0);
         font-size: 16px;
         overflow-y: scroll;
 
         ol, ul {
-          width: 95%;
-          transform: translate(5%, 0);
+          width: 91%;
+          transform: translate(9%, 0);
+        }
+        li{
+          position: relative;
+        }
+        .edit_box{
+          position: absolute;
+          width: inherit;
+          height: inherit;
         }
       }
 
@@ -141,4 +156,8 @@
       justify-content: space-between;
     }
   }
+}
+.addrecipe{
+  display: none;
+  z-index: 0;
 }
