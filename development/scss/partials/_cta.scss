@@ -1,3 +1,4 @@
+@import "scss_Variables";
 .main__width {
   width: 85%;
   color: white;
@@ -10,14 +11,20 @@
 
 .cta {
   width: 100vw;
-  background-color: #4A4A49;
+  background-color: $color_Header_TextColumns;
   .cta__description {
     width: 65%;
     margin: 25px 0;
+
     h3 {
       padding-bottom: 15px;
-      font-weight: normal;
-      font-size: 2rem;
+      font-weight: 500;
+      font-size: 30px;
+      font-family: $fontOpenSans;
+      p {
+        font-size: 20px;
+        font-family: $fontOpenSans;
+      }
     }
   }
   .cta__button {
@@ -29,7 +36,7 @@
       border: none;
       width: 160px;
       height: 40px;
-      background-color: #FF6600;
+      background-color: $color_ButonsOrange_Highlights_Screenheaders;
       cursor: pointer;
     }
   }

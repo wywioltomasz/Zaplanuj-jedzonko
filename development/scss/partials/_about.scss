@@ -1,28 +1,36 @@
+@import "scss_Variables";
 .about {
   width: 100vw;
-  background-color: #EBEBEB;
-  color: black;
+  height: 400px;
+  color: $color_Header_TextColumns;
+  background-color: $color_ScreenBackground;
+}
+.main_width {
+  width: 85%;
+  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  padding: 30px;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
-  .client__photo {
-    height: 250px;
-    width: 250px;
-    margin-left: 90px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    background-color: #5B605F;
-  }
+  align-content: center;
+}
+.client__photo {
+  height: 300px;
+  width: 300px;
+  background-image: url("../images/cookingbaby.jpg");
+  object-fit: cover;
+}
+
   .client__described {
+    text-align: left;
     width: 60%;
-    margin: 25px 60px;
-    h2 {
-      padding-bottom: 10px;
-      font-weight: normal;
-      font-size: 1.8rem;
-    }
   }
+
+.client__described h2 {
+  padding-bottom: 10px;
+  font-size: 30px;
+  font-weight: 500;
+}
+.client__described p{
+  font-size: 20px;
 }
 
