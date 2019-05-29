@@ -62,6 +62,7 @@
         width: 626px;
         height: 30px;
         font-family: 'Open sans', Arial, sans-serif;
+        padding-left: 5px;
       }
 
       textarea {
@@ -71,6 +72,7 @@
         max-height: 100px;
         font-family: 'Open sans', Arial, sans-serif;
         resize: none;
+        padding-left: 5px;
       }
 
       &:nth-child(2) {
@@ -121,7 +123,7 @@
         font-size: 16px;
         overflow-y: scroll;
 
-        ol {
+        ol, ul {
           width: 95%;
           transform: translate(5%, 0);
         }

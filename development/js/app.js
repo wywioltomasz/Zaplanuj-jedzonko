@@ -2,9 +2,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var submitName = document.getElementById('submit_name');          //Znajduję input imienia
     var inputName = document.getElementById('input_name');          //Znajduję button wysyłający imię z inputu
-    var userName = document.querySelector('.user_name');            //Imię w headerze aplikacji
-    //console.log(inputName.value);
-
+    var userName = document.querySelector('.user_name');//Imię w headerze aplikacji
+    var firstEntry = document.querySelector('.first_entry');
+  //console.log(inputName.value);
+// localStorage.clear();
+if(localStorage.getItem('userName') === null ){
 
     submitName.addEventListener('click', function (event) {
         console.log('klik');
@@ -14,7 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
             // console.log(localStorage);
             inputName.value = null;
 
-            userName.innerText = localStorage.userName;                        //zmieniam imię w html na podane przez input
+            userName.innerText = localStorage.userName;//zmieniam imię w html na podane przez input
+
 
         }
 
@@ -24,6 +27,9 @@ document.addEventListener('DOMContentLoaded', function () {
             submitName.click();
         }
     })
-
+}else{
+  userName.innerText = localStorage.userName;
+  submitName.parentElement.parentElement.removeChild(firstEntry);
+}
 
 });
