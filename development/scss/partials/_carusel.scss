@@ -1,10 +1,11 @@
+@import "scss_Variables";
 .wrap, #slider, .slide_content{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   width: 100vw;
   height: 600px;
-  font-family: "Opensans", Arial, sans-serif;
+  font-family: $fontOpenSans;
   overflow-x: hidden;
 }
 .wrap{
@@ -21,14 +22,17 @@
   width: 50%;
   margin: 200px auto;
   vertical-align: center;
-  background-color: #FFFFFA;
+  background-color: $color_ScreenBackground;
 }
 .text h2{
-  padding-bottom: 50px;
-  color: #4a4a49;
+  padding-bottom: 30px;
+  color: $color_Header_TextColumns;
+  font-size: 30px;
+  font-weight: 500;
 }
 .text p{
-  color: #4a4a49;
+  color: $color_Header_TextColumns;
+  font-size: 20px;
 }
 .slide1{
   background-image: url("../images/carousel1.jpg");
@@ -49,13 +53,13 @@
 #arrow_right{
   right: 40px;
   &:hover{
-    color: #FF6600;
+    color: $color_ButonsOrange_Highlights_Screenheaders;
   }
 }
 #arrow_left{
   left: 40px;
   &:hover{
-    color: #FF6600;
+    color: $color_ButonsOrange_Highlights_Screenheaders;
   }
 }
 

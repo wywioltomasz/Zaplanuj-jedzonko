@@ -1,33 +1,41 @@
+@import "scss_Variables";
 .newsletter_section{
   width: 100vw;
   height: 70px;
-  background-color: #5B605F;
+  background-color: $color_SidePanel_Navigation;
   color: white;
+}
+.main_width{
+  width: 85%;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  align-content: center;
 }
 .newsletter_section h3{
   font-size: 30px;
   font-weight: lighter;
-  font-family: 'Open sans', Arial, sans-serif;
-  padding-left: 60px;
+  font-family: $fontOpenSans;
 }
 .newsletter_section form{
-  align-items: center;
+  width: 400px;
   display: flex;
-  padding-right: 60px;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
 }
 .text_area{
   outline: none;
   resize: none;
+  display: block;
 }
 .submit{
   height: 32px;
-  width: 250px;
+  width: 100px;
   font-size: 20px;
-  background-color: #FF6600;
+  background-color: $color_ButonsOrange_Highlights_Screenheaders;
   border-style: none;
   color: white;
+  display: block;
 }

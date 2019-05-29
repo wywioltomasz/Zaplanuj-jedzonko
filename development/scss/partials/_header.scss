@@ -3,33 +3,34 @@
 //
 // Sass:
 // https://fontawesome.com/how-to-use/on-the-web/using-with/sass
-
-@import url('https://fonts.googleapis.com/css?family=Charmonman');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-
+@import "scss_Variables";
 .header_landingpage {
-  background-color: #292F32;
+  background-color: #4a4a49;
   width: 100vw;
   padding: 10px 0;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   height: 100px;
-  font-family: "Open sans", Arial, sans-serif;
+  font-family: $fontOpenSans;
 }
-
+.main_width{
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .logo {
-  font-size: 28px;
+  font-size: 25px;
   width: 40%;
+  padding-bottom: 15px;
   #logo__first {
     font-weight:100;
     color: white;
-    font-family: Charmonman, Arial, sans-serif;
+    font-family: $fontCharmonman;
   }
   #logo__second {
-    color: #E58A20;
+    color: $color_ButonsOrange_Highlights_Screenheaders;
     font-weight: 700;
-    font-family: Charmonman, Arial, sans-serif;
+    font-family: $fontCharmonman;
   }
 }
 
@@ -42,9 +43,9 @@
       color: white;
       text-transform: uppercase;
       text-decoration: none;
-      margin-left: 50px;
+      margin-left: 30px;
       &:hover {
-        color: #E58A20;
+        color: $color_ButonsOrange_Highlights_Screenheaders;
       }
     }
   }
