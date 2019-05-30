@@ -1,4 +1,6 @@
-
+a {
+  text-decoration: none;
+}
 .app_content{
   padding: 20px 35px;
 }
@@ -14,7 +16,7 @@ i {
 
 .title {
   text-transform: uppercase;
-  color: #ff6600;
+  color: $appHeaderFontColor;
   margin: 0 auto;
   width: 100%;
   display: flex;
@@ -94,5 +96,10 @@ i {
 
     }
   }
+}
+.nav_box_recipes .button  {
+  background-color: #292F32;
+  border-left: 7px solid #E58A20;
+  position: relative;
 }
 

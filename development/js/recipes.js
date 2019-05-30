@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
             case ingredientList.children.length === 0:
                 alertBox.innerText = "Przepis musi zawierać składniki";
                 break;
-            default:
+          default:
 
                 //****************************Zapisywanie informacji o nowym przepisie**********************
                 for (var i = 0; i < instructions.length; i++) {
@@ -246,13 +246,7 @@ document.addEventListener('DOMContentLoaded', function () {
               clone.querySelector('.name').innerText = newRecipe.title;
               clone.querySelector('.description').innerText = newRecipe.description;
               entry_box.appendChild(clone);
-              clone.querySelector('.bin').addEventListener('click', function () {
-                console.log(this.parentElement.parentElement.parentElement);
-                this.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement);
-                localStorage.removeItem('id:0');
-
-
-              })
+              window.location.reload(true);
         }
 
 
@@ -271,12 +265,16 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log(allRecipes);
     //Zapisuje wszystkie przepisy w liscie przepisow.
   for(var i = 0; i < allRecipes.length; i++){
+
     var clone = new_entry.cloneNode(true);
     clone.querySelector('.id').innerText = allRecipes[i].id + 1;
     clone.querySelector('.name').innerText = allRecipes[i].title;
     clone.querySelector('.description').innerText = allRecipes[i].description;
     entry_box.appendChild(clone);
     console.log(clone.querySelector('.bin'));
+
+    //Usuwanie przepisu z listy
+
     clone.querySelector('.bin').addEventListener('click', function () {
       console.log(this.parentElement.parentElement.parentElement);
       this.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement);
@@ -284,12 +282,23 @@ document.addEventListener('DOMContentLoaded', function () {
       console.log(del_id);
       for(var j=0; j < allRecipes.length; j++) {
         if(del_id === allRecipes[j].id){
-          allRecipes.splice(j, j+1);
-          console.log(allRecipes);
+          allRecipes.splice(j, 1);
+          if(allRecipes.length > 0) {
+            for (var z = 0; z < allRecipes.length; z++) {
+              allRecipes[z].id = z;
+              localStorage.setItem("recipes", JSON.stringify(allRecipes));
+              window.location.reload(true);
+            }
+          }else{
+            localStorage.setItem("recipes", JSON.stringify(allRecipes));
+          }
         }
       }
     })
   }
-
+  var nav_recipes = document.querySelector('.nav_box_recipes');
+  nav_recipes.addEventListener('click', function () {
+    window.location.reload(true);
+  })
 });
 
