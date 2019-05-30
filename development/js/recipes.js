@@ -234,7 +234,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
                 saveRecipeToLocalStorage(newRecipe);
-                console.log(allRecipes);
                 //console.log(typeof allRecipes);
 
                 alertBox.innerHTML = null;
@@ -262,7 +261,6 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem("recipes", JSON.stringify(dataFromLocalStorage));
         }
     }
-    console.log(allRecipes);
     //Zapisuje wszystkie przepisy w liscie przepisow.
   for(var i = 0; i < allRecipes.length; i++){
 
