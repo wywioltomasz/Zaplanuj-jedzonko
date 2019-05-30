@@ -19,18 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         recipes.style.display = 'none';
 
     });
-    // for(var i = 0; i < edit.length; i++){ //funckja do edytowania przepisu (RAFAŁ)
-    //  edit.addEventListener('click', function () {
-    //
-    //
-    //  })
-    // }
-    for (var i = 0; i < bin.length; i++) {
-        bin[i].addEventListener('click', function () {
-            var entry_box = document.querySelector('.entry__box');
-            entry_box.removeChild(this.parentElement.parentElement) //event usuwajacy przepis na klika;
-        });
-    }
+
     // console.log(localStorage.getItem('userName'));
 
 
@@ -53,6 +42,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var instructionList = document.querySelector('.instruction_list');      //listy instrukcji i składników
     var ingredientList = document.querySelector('.ingredient_list');
+
+  var entry_box = document.querySelector('.entry__box'); //box z listą przepisów
+
+  var new_entry = document.createElement('div'); //
+  var new_entry_id = document.createElement('div');
+  var new_entry_name = document.createElement('div');
+  var new_entry_description = document.createElement('div');
+  var new_entry_action = document.createElement('div');
+  var new_entry_edit = document.createElement('i');
+  var new_entry_bin = document.createElement('i');
+  new_entry_action.appendChild(new_entry_edit);
+  new_entry_action.appendChild(new_entry_bin);
+  new_entry.appendChild(new_entry_id);
+  new_entry.appendChild(new_entry_name);
+  new_entry.appendChild(new_entry_description);
+  new_entry.appendChild(new_entry_action);
+  new_entry.classList.add('entry');
+  new_entry_id.classList.add('id');
+  new_entry_name.classList.add('name');
+  new_entry_description.classList.add('description');
+  new_entry_action.classList.add('action');
+  new_entry_edit.classList.add('far','fa-edit', 'icon','edit');
+  new_entry_bin.classList.add('far','fa-trash-alt', 'icon', 'bin');
+
 
 
 
@@ -165,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    saveAndExit.addEventListener('click', function (event) { //funkcja wywolujaca okno z nowym entry, pamietaj o ID (RAFAŁ)
+    saveAndExit.addEventListener('click', function (event) { //zapisz i wyjdz click
 
         //****************************Walidacja********************************************
         switch (true) {
@@ -222,10 +235,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 saveRecipeToLocalStorage(newRecipe);
                 console.log(allRecipes);
-                console.log(typeof allRecipes);
+                //console.log(typeof allRecipes);
 
                 alertBox.innerHTML = null;
 
+                    //dodawanie nowego przepisu do listy przepisów
+              var clone = new_entry.cloneNode(true);
+
+              clone.querySelector('.id').innerText = newRecipe.id + 1;
+              clone.querySelector('.name').innerText = newRecipe.title;
+              clone.querySelector('.description').innerText = newRecipe.description;
+              entry_box.appendChild(clone);
+              clone.querySelector('.bin').addEventListener('click', function () {
+                console.log(this.parentElement.parentElement.parentElement);
+                this.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement);
+                localStorage.removeItem('id:0');
+
+
+              })
         }
 
 
@@ -241,6 +268,28 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem("recipes", JSON.stringify(dataFromLocalStorage));
         }
     }
+    console.log(allRecipes);
+    //Zapisuje wszystkie przepisy w liscie przepisow.
+  for(var i = 0; i < allRecipes.length; i++){
+    var clone = new_entry.cloneNode(true);
+    clone.querySelector('.id').innerText = allRecipes[i].id + 1;
+    clone.querySelector('.name').innerText = allRecipes[i].title;
+    clone.querySelector('.description').innerText = allRecipes[i].description;
+    entry_box.appendChild(clone);
+    console.log(clone.querySelector('.bin'));
+    clone.querySelector('.bin').addEventListener('click', function () {
+      console.log(this.parentElement.parentElement.parentElement);
+      this.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement);
+      var del_id = this.parentElement.parentElement.querySelector('.id').innerText - 1;
+      console.log(del_id);
+      for(var j=0; j < allRecipes.length; j++) {
+        if(del_id === allRecipes[j].id){
+          allRecipes.splice(j, j+1);
+          console.log(allRecipes);
+        }
+      }
+    })
+  }
 
 });
 
