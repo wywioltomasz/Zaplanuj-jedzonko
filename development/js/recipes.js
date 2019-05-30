@@ -299,6 +299,11 @@ document.addEventListener('DOMContentLoaded', function () {
   var nav_recipes = document.querySelector('.nav_box_recipes');
   nav_recipes.addEventListener('click', function () {
     window.location.reload(true);
-  })
+  });
+  if(localStorage.getItem('userName') === null ){
+    window.location.href = "app.html";
+  }
+  document.querySelector('.user_name').innerHTML = localStorage.getItem('userName');
+
 });
 

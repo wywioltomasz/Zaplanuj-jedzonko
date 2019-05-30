@@ -62,7 +62,10 @@ section {
   display: flex;
   flex-direction: row;
 }
-
+.nav_box_main .button {
+  background-color: #292F32;
+  border-left: 7px solid #E58A20;
+}
 .button {
   height: 70px;
   width: 300px;
