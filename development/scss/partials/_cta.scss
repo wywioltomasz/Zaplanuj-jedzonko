@@ -31,13 +31,15 @@
     margin: 25px 0;
     button {
       color: white;
-      font-weight: bold;
-      font-size: 1rem;
+      font-weight: 500;
+      font-size: 20px;
       border: none;
       width: 160px;
       height: 40px;
       background-color: $color_ButonsOrange_Highlights_Screenheaders;
       cursor: pointer;
+      border-radius: 5px;
+      outline: none;
     }
   }
 }

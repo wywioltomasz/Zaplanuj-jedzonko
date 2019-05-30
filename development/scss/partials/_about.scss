@@ -16,8 +16,9 @@
 .client__photo {
   height: 300px;
   width: 300px;
-  background-image: url("../images/cookingbaby.jpg");
-  object-fit: cover;
+  background-image: url("https://www.wprost.pl/_thumb/59/7b/770a5bb731acf4b675d215d4da5f.jpeg");
+  opacity: 0.9;
+  background-size: contain;
 }
 
   .client__described {

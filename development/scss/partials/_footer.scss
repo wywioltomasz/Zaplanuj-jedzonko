@@ -27,23 +27,28 @@
 }
 .footer__box ul li{
   font-size: 15px;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 textarea{
-  height: 30px;
+  height: 40px;
   width: 180px;
   resize: none;
   overflow: auto;
+  border-radius: 5px 0 0 5px;
+  outline: none;
 }
 .footer__submit {
   background-color: $color_ButonsOrange_Highlights_Screenheaders;
   font-weight: bold;
-  height: 30px;
+  height: 40px;
   width: 80px;
   border: none;
   color: white;
   font-size: 1rem;
   position: absolute;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  outline: none;
 }
 .lower__footer {
   background-color: $color_Header_TextColumns;
