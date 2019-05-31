@@ -1,70 +1,369 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Zaplanuj Jedzonko</title>
-    <link rel="stylesheet" href="css/main.css"/>
-    <script src="js/schedules.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Zaplanuj Jedzonko</title>
+  <link rel="stylesheet" href="css/main.css"/>
+  <script></script>
 </head>
 <body>
 <header>
-    <a href="index.html">
-        <div class="main_logo">
-            <h1>
-                <span class="first">Zaplanuj</span>
-                <span class="second">Jedzonko</span>
-            </h1>
-        </div>
-    </a>
-    <div class="main_login">
-        <h3 class="user_name">Imię</h3>
-        <span class="user_icon"><i class="fas fa-user-circle"></i></span>
+  <a href="index.html">
+    <div class="main_logo">
+      <h1>
+        <span class="first">Zaplanuj</span>
+        <span class="second">Jedzonko</span>
+      </h1>
     </div>
+  </a>
+  <div class="main_login">
+    <h3 class="user_name">Imię</h3>
+    <span class="user_icon"><i class="fas fa-user-circle"></i></span>
+  </div>
 </header>
 <section>
-    <div class="left_side_nav">
-        <div class="nav_box">
-            <span class="orange_sideline"></span>
-            <a href="app.html"><button class="button">Pulpit<span class="arrow">&#x203A</span></button></a>
-        </div>
-        <div class="nav_box">
-            <span class="orange_sideline"></span>
-            <a href="recipes.html"><button class="button">Przepisy<span class="arrow">&#x203A</span></button></a>
-        </div>
-        <div class="nav_box nav_box_schedules">
-            <span class="orange_sideline"></span>
-            <button class="button">Plany<span class="arrow">&#x203A</span></button>
-        </div>
-        <div class="nav_box">
-            <span class="orange_sideline"></span>
-            <button class="button">Lista zakupów<span class="arrow">&#x203A</span></button>
-        </div>
+  <div class="left_side_nav">
+    <div class="nav_box">
+      <a href="app.html"><button class="button">Pulpit<span class="arrow">&#x203A</span></button></a>
     </div>
-    <div class="background">
-
-        <div class="app_content recipes">     <!--kontener zawartości w aplikacji-->
-            <div class="title">
-                <h2>Lista planów</h2>
-                <i class="title__plus fas fa-plus-square"></i>
+    <div class="nav_box">
+      <a href="recipes.html"><button class="button">Przepisy<span class="arrow">&#x203A</span></button></a>
+    </div>
+    <div class="nav_box nav_box_schedules">
+      <a href="schedules.html"><button class="button">Plany<span class="arrow">&#x203A</span></button></a>
+    </div>
+    <div class="nav_box">
+      <button class="button">Lista zakupów<span class="arrow">&#x203A</span></button>
+    </div>
+  </div>
+  <div class="background">
+    <div class="app_content addschedule">
+      <div class="newschedule">
+        <div class="newschedule_header">
+          <h3 class="app_content_header"> Nowy plan</h3>
+          <span class="alert-box"></span>
+          <button id="save_recipe"> Zapisz i zamknij</button>
+        </div>
+        <div class="container">
+          <div class="schedule_info">
+            <span>Nazwa planu</span>
+            <input id="schedule_name" type="text" size="50" placeholder="Nazwa przepisu">
+          </div>
+          <div class="schedule_info">
+            <span>Opis planu</span>
+            <textarea id="recipe_description" rows="5" maxlength="360"
+                      placeholder="Krótki opis przepisu"></textarea>
+          </div>
+          <div class="schedule_info">
+            <span>Numer tygodnia</span>
+            <div class="fix">
+            <input class="schedule_info_week" type="number" style="width: 5%; padding: 0">
             </div>
-            <div class="recipe__list">
-                <div class="list__header">
-                    <div class="id">Id</div>
-                    <div class="name">nazwa</div>
-                    <div class="description">opis</div>
-                    <div class ="week">tydzień</div>
-                    <div class="action">akcje</div>
-                </div>
-                <div class="entry__box">
-                </div>
+          </div>
+        </div>
+        <div class="grid_box">
+          <div class="meal_box">
+            <div class="meal-1">
+              <h3>śniadanie</h3>
+            </div>
+            <div class="meal-2">
+              <h3>drugie śniadanie</h3>
+            </div>
+            <div class="meal-3">
+              <h3>zupa</h3>
+            </div>
+            <div class="meal-4">
+              <h3>drugie danie</h3>
+            </div>
+            <div class="meal-5">
+              <h3>kolacja</h3>
             </div>
         </div>
+          <div class="day_box">
+            <div class="day-1">
+              <h4>Poniedziałek</h4>
+            </div>
+            <div class="day-2">
+              <h4>Wtorek</h4>
+            </div>
+            <div class="day-3">
+              <h4>Środa</h4>
+            </div>
+            <div class="day-4">
+              <h4>Czwartek</h4>
+            </div>
+            <div class="day-5">
+              <h4>Piątek</h4>
+            </div>
+            <div class="day-6">
+              <h4>Sobota</h4>
+            </div>
+            <div class="day-7">
+              <h4>Niedziela</h4>
+            </div>
+          </div>
+          <div class="input_box">
+            <!-- pon !-->
+            <div class="mon_meal-1">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="mon_meal-2">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="mon_meal-3">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="mon_meal-4">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="mon_meal-5">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <!-- wtorek !-->
+            <div class="tue_meal-1">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="tue_meal-2">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="tue_meal-3">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="tue_meal-4">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="tue_meal-5">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <!-- środa !-->
+            <div class="wen_meal-1">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="wen_meal-2">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="wen_meal-3">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="wen_meal-4">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="wen_meal-5">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <!-- CZW !-->
+            <div class="thu_meal-1">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="thu_meal-2">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="thu_meal-3">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="thu_meal-4">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="thu_meal-5">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <!-- PT !-->
+            <div class="fri_meal-1">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="fri_meal-2">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="fri_meal-3">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="fri_meal-4">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="fri_meal-5">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <!-- sobota !-->
+            <div class="sat_meal-1">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="sat_meal-2">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="sat_meal-3">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="sat_meal-4">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="sat_meal-5">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <!-- niedziela !-->
+            <div class="sun_meal-1">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="sun_meal-2">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="sun_meal-3">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="sun_meal-4">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+            <div class="sun_meal-5">
+              <select name="recipe">
+                <option value ="grzyp">Grzyp</option>
+                <option value ="bep">Bep</option>
+                <option value ="bup">Bup</option>
+              </select>
+            </div>
+          </div>
+          </div>
+      </div>
     </div>
-    </div>
+  </div>
 </section>
 </body>
 </html>

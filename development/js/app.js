@@ -32,4 +32,11 @@ document.addEventListener('DOMContentLoaded', function () {
     userName.innerText = localStorage.userName;
     submitName.parentElement.parentElement.parentElement.removeChild(firstEntry.parentElement);
   }
+  if(localStorage.getItem('userName') === null )
+  {
+    var app_main = document.querySelector('.app_content_main');
+    var dashboard = document.querySelector('.dashboard');
+    app_main.style.display = 'block';
+    dashboard.style.display = 'none';
+  }
 });
