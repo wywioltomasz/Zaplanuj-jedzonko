@@ -7,16 +7,18 @@
 @import 'partials/variables.scss';
 @import "partials/scss_Variables";
 @import "partials/fonts";
-@import 'partials/firstentry';
-@import  "partials/mainpage";
-@import 'partials/addrecipe';
+
 @import "partials/mainpage";
 @import "partials/header";
-@import "partials/recipes";
 @import "partials/carusel";
 @import "partials/newsletter_landingpage";
 @import "partials/threecols";
 @import "partials/about";
 @import "partials/cta";
 @import "partials/footer";
+
 @import 'partials/firstentry';
+@import "partials/dashboard";
+@import "partials/recipes";
+@import 'partials/addrecipe';
+
