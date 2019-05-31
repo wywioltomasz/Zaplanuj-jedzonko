@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/main.css"/>
   </head>
   <body>
-    <header class="header_landingpage">
+  <header class="header_landingpage">            <!--  _header.scss  -->
+    <div class="main_width">
       <div class="logo">
         <h1>
           <span id="logo__first">Zaplanuj</span>
@@ -18,30 +19,27 @@
       </div>
       <div class="menu">
         <ul class="menu__list">
-          <li><a href="">zaplanuj posiłki!</a></li>
-          <li><a href="">dlaczego warto?</a></li>
-          <li><a href="">o mnie</a></li>
-          <li><a href="">kontakt</a></li>
+          <li><a href="app.html">zaplanuj posiłki!</a></li>
+          <li><a href="#why">dlaczego warto?</a></li>
+          <li><a href="#footer">o mnie</a></li>
+          <li><a href="#footer">kontakt</a></li>
         </ul>
       </div>
-    </header>
-    <section>
+    </div>
+  </header>                                        <!--  _header.scss  -->
+    <section>                                      <!--  _carusel.scss  -->
       <div class="wrap">
         <div id="arrow_left"><i class="fas fa-chevron-left"></i></div>
         <div id="slider">
-          <div class="slide">
+          <div class="slide slide1">
             <div class="slide_content">
-              <div class="text">
+              <div class="text text1">
                 <h2>Lorem ipsum</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
                   printer took a galley of type and scrambled it to make a type specimen book.
                 </p>
               </div>
-            </div>
-          </div>
-          <div class="slide slide1">
-            <div class="slide_content">
             </div>
           </div>
           <div class="slide slide2">
@@ -52,72 +50,86 @@
             <div class="slide_content">
             </div>
           </div>
+          <div class="slide slide4">
+            <div class="slide_content">
+            </div>
+          </div>
         </div>
         <div id="arrow_right"><i class="fas fa-chevron-right"></i></div>
       </div>
-    </section>
-    <section>
-      <!-- CTA + button -->
-    </section>
-    <section>
-      <!-- features -->
-    </section>
-
-    <section>
-      <!-- three columns -->
-        <div class="columns_box">
-          <div class="main-width">
-        <div class="column">
-          <div class="icon">
-            <i class="fas fa-check"></i>
+    </section>                                     <!--  _carusel.scss  -->
+      <section class="cta">                            <!--_cta.scss -->
+        <div class="main__width">
+          <div class="cta__description">
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p>Różnorakie i realizacji systemu szkolenia kadry odpowiadającego potrzebom. De facto, usprawnienie systemu szkolenia kadr wymaga niezwykłej precyzji w restrukturyzacji przedsiębiorstwa. Obywatelu, zakup nowego sprzętu zabezpiecza udział szerokiej grupie w restrukturyzacji przedsiębiorstwa.</p>
           </div>
-          <h3>Lorem ipsum dolor sit amet</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.</p>
+          <div class="cta__button">
+            <a href=""><button>Lorem</button></a>
+          </div>
         </div>
-        <div class="column">
-          <div class="icon">
-            <i class="far fa-clock"></i>
+     </section>                                         <!--_cta.scss -->
+     <section id="why">                                        <!-- _threecols.scss -->
+      <div class="columns_box">
+        <div class="main-width">
+          <div class="column">
+            <div class="icon">
+              <i class="fas fa-check"></i>
+            </div>
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat.
+              Donec placerat nisl magna, et faucibus arcu condimentum sed.</p>
           </div>
-          <h3>Lorem ipsum dolor sit amet</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.</p>
+          <div class="column">
+            <div class="icon">
+              <i class="far fa-clock"></i>
+            </div>
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat.
+              Donec placerat nisl magna, et faucibus arcu condimentum sed.</p>
+          </div>
+          <div class="column">
+            <div class="icon">
+              <i class="fas fa-list"></i>
+            </div>
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat.
+              Donec placerat nisl magna, et faucibus arcu condimentum sed.</p>
+          </div>
         </div>
-        <div class="column">
-          <div class="icon">
-            <i class="fas fa-list"></i>
-          </div>
-          <h3>Lorem ipsum dolor sit amet</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.</p>
-        </div>
-          </div>
       </div>
-
-    </section>
-    <section>
+    </section>                                             <!-- _threecols.scss -->
+    <section>                                        <!--  _newsletter_landingpage.scss  -->
       <div class="newsletter_section">
-        <h3>Lorem ipsum dolor sit amet</h3>
-        <form>
-          <textarea class="text_area" cols="40" rows="2" ></textarea><input class="submit" type="submit" value="Lorem">
-        </form>
-        </form>
+        <div class="main_width">
+          <h3>Lorem ipsum dolor sit amet</h3>
+          <form>
+            <textarea class="text_area" cols="40" rows="1"></textarea>
+            <input class="submit" type="submit" value="Lorem">
+          </form>
+        </div>
       </div>
-    </section>
-
-
-
-    <section class="about">
-      <div class="main-width">
-        <div class="client__photo"></div>
+    </section>                                        <!--  _newsletter_landingpage.scss  -->
+  <section class="about">                           <!--  _about.scss  -->
+    <div class="main_width">
+      <div class="client__photo"></div>
         <div class="client__described">
           <h2>Lorem ipsum dolor sit amet</h2>
-          <p>Różnorakie i realizacji systemu szkolenia kadry odpowiadającego potrzebom. De facto, usprawnienie systemu szkolenia kadr wymaga niezwykłej precyzji w restrukturyzacji przedsiębiorstwa. Obywatelu, zakup nowego sprzętu zabezpiecza udział szerokiej grupie w restrukturyzacji przedsiębiorstwa. Reasumując. zmiana przestarzałego systemu obsługi spełnia istotną rolę w wypracowaniu odpowiednich warunków aktywizacji.</p>
+          <p>Różnorakie i realizacji systemu szkolenia kadry odpowiadającego potrzebom. De facto, usprawnienie systemu
+          szkolenia kadr wymaga niezwykłej precyzji w restrukturyzacji przedsiębiorstwa. Obywatelu, zakup nowego sprzętu
+          zabezpiecza udział szerokiej grupie w restrukturyzacji przedsiębiorstwa. Reasumując.</p>
         </div>
       </div>
-    </section>
-    <footer>
-      <div class="upper__footer">
+  </section>
+  <!--  _about.scss  -->
+    <footer id="footer">                                          <!-- _footer.scss -->
+    <div class="upper__footer">
+      <div class="main_width">
         <div class="footer__box">
           <h2>Lorem ipsum dolor</h2>
-          <p>Gergtrgerh thdfhyfjfy regtsrhrtsh regrsthrthdfh ergrthhtshfghdf ssdfgsdfh hrtsh regrsthr hrtsh regrsthr ssdfgsdfh hrtsh regrsthr hrtsh regrsthr gssdfgsdfh hrtsh regrsthr hrtsh regrsthr.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Aliquam at porttitor sem. Aliquam erat volutpat. Donec
+            placerat nisl magna, et faucibus arcu condimentum sed.</p>
         </div>
         <div class="footer__box">
           <h2>Lorem ipsum dolor</h2>
@@ -132,7 +144,7 @@
           <h2>Lorem ipsum dolor</h2>
           <form>
             <textarea></textarea>
-            <input type="submit" value="Send">
+            <input class="footer__submit" type="submit" value="Send">
           </form>
           <div class="social__media">
             <i class="fab fa-facebook-square"></i>
@@ -141,10 +153,11 @@
           </div>
         </div>
       </div>
+    </div>
       <div class="lower__footer">
         <p>Copyright <span>ZaplanujJedzonko.pl</span></p>
       </div>
-    </footer>
+  </footer>                                           <!-- _footer.scss -->
 
     <script src="./js/index.js"></script>
   </body>

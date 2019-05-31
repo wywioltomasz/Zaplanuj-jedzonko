@@ -1,70 +1,73 @@
-footer {
-  width: 100vw;
-  display: block;
-  background-color: #5B605F;
-}
-.upper__footer {
-  margin: 0 auto;
-  background-color: #5B605F;
+@import "scss_Variables";
+.upper__footer{
+  background-color: $color_SidePanel_Navigation;
   color: white;
-  width: 75vw;
-  padding: 30px 90px;
+  width: 100vw;
+  height: 25vh;
+}
+.main_width{
+  width: 85%;
+  margin: 0 auto;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
-  .footer__box {
-    width: 26%;
-    position: relative;
-    h2 {
-      padding-bottom: 10px;
-      font-weight: normal;
-    }
-    textarea {
-      height: 30px;
-      width: 130px;
-      resize: none;
-      overflow: auto;
-    }
-    input {
-      background-color: #E58A20;
-      font-weight: bold;
-      height: 30px;
-      width: 70px;
-      border: none;
-      color: white;
-      font-size: 1rem;
-      position: absolute;
-      &:hover {
-        cursor: pointer;
-      }
-    }
-    ul {
-      position: absolute;
-      left: 18px;
-      li {
-        margin-bottom: 8px;
-      }
-    }
-  }
+  align-content: center;
+}
+.footer__box {
+  width: 24%;
+  padding-top: 20px;
+}
+.footer__box h2{
+  font-weight: 500;
+  font-size: 30px;
+  padding-bottom: 15px;
+}
+.footer__box p{
+  font-size: 15px;
+}
+.footer__box ul li{
+  font-size: 15px;
+  margin-left: 20px;
+}
+textarea{
+  height: 40px;
+  width: 180px;
+  resize: none;
+  overflow: auto;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+.footer__submit {
+  background-color: $color_ButonsOrange_Highlights_Screenheaders;
+  font-weight: bold;
+  height: 40px;
+  width: 80px;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  position: absolute;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  outline: none;
 }
 .lower__footer {
-  background-color: #464646;
+  background-color: $color_Header_TextColumns;
   padding: 15px;
   color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 1rem;
   span {
-    color: #E58A20;
+    color: $color_ButonsOrange_Highlights_Screenheaders;
   }
 }
-
 .social__media {
   padding-top: 15px;
   padding-left: 3px;
-  .fab {
-    font-size: 2.3rem;
-    margin-right: 30px;
-  }
 }
+.fab {
+  font-size: 2.3rem;
+  margin-right: 30px;
+}
+

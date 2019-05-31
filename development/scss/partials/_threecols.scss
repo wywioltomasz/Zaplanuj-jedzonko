@@ -1,8 +1,9 @@
-$main-width: 75%;
+@import "scss_Variables";
+$main-width: 85%;
 .columns_box {
-  background-color: #ebebeb;
-  color: #4a4a49;
-  height: 80vh;
+  background-color: $color_ScreenBackground;
+  color: $color_Header_TextColumns;
+  height: 500px;
   width: 100%;
   .main-width {
     margin: 0 auto;
@@ -15,22 +16,22 @@ $main-width: 75%;
     .column {
       width: 24%;
       h3 {
-        font-weight: 100;
-        font-size: 2em;
+        font-weight: 500;
+        font-size: 30px;
         margin-bottom: 10px;
-        width: 105%;
+        width: 100%;
         margin-left: -5px;
       }
       p {
-        font-size: 1.5em;
-        color: #5b605f;
+        font-size: 20px;
+        color: $color_Header_TextColumns;
         margin-top: 10px;
         padding-bottom: 20px;
       }
     }
     .icon {
-      font-size: 90px;
-      color: #a1a194;
+      font-size: 60px;
+      color: $color_BasketIcon_TableLines_Icons;
       margin-bottom: 20px;
     }
   }

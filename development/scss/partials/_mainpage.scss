@@ -1,31 +1,35 @@
 body {
   width: 100vw;
+  background-color: #FFFFFA;
 }
+.main-width {
+  width: 85vw;
+  margin: 0 auto;
+}
+  header {
+    height: 100px;
+    width: 100%;
+    background-color: #4a4a49;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 100px;
+  }
 
-header {
-  height: 100px;
-  width: 100%;
-  background-color: #292F32;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 30px;
-  padding-right: 100px;
-}
+  .first, .second {
+    font-family: "Charmonman", Arial, sans-serif;
+  }
 
-.first, .second {
-  font-family: "Charmonman", sans-serif;
-}
+  .first {
+    font-weight: 100;
+    color: white;
+  }
 
-.first {
-  font-weight: 100;
-  color: white;
-}
-
-.second {
-  color: #FF6600;
-  font-weight: 700;
-}
+  .second {
+    color: #FF6600;
+    font-weight: 700;
+  }
 
 .main_login {
   display: flex;

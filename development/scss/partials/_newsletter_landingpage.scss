@@ -1,0 +1,50 @@
+@import "scss_Variables";
+.newsletter_section{
+  width: 100vw;
+  height: 70px;
+  background-color: $color_SidePanel_Navigation;
+  color: white;
+}
+.main_width{
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+.newsletter_section h3{
+  font-size: 30px;
+  font-weight: lighter;
+  font-family: $fontOpenSans;
+  padding-top: 10px;
+}
+.newsletter_section form{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  padding-top: 15px;
+}
+.text_area{
+  outline: none;
+  resize: none;
+  display: block;
+  height: 40px;
+  width: 250px;
+  border-radius: 5px 0 0 5px;
+
+}
+.submit{
+  height: 40px;
+  width: 160px;
+  font-size: 20px;
+  background-color: $color_ButonsOrange_Highlights_Screenheaders;
+  border-style: none;
+  border-radius: 0 5px 5px 0;
+  color: white;
+  display: block;
+  cursor: pointer;
+  outline: none;
+
+}

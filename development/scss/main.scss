@@ -5,6 +5,7 @@
 // https://fontawesome.com/how-to-use/on-the-web/using-with/sass
 @import "partials/reset";
 @import 'partials/variables.scss';
+@import "partials/scss_Variables";
 @import "partials/fonts";
 @import 'partials/firstentry';
 @import  "partials/mainpage";
@@ -13,6 +14,9 @@
 @import "partials/header";
 @import "partials/recipes";
 @import "partials/carusel";
+@import "partials/newsletter_landingpage";
 @import "partials/threecols";
-@import "partials/footer";
 @import "partials/about";
+@import "partials/cta";
+@import "partials/footer";
+@import 'partials/firstentry';
