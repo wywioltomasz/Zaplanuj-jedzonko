@@ -321,6 +321,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var recipe_leng = allRecipes.length;
   localStorage.setItem('recipe_leng', recipe_leng);
-  console.log(localStorage.getItem('recipe_leng'))
 });
 
