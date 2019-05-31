@@ -282,13 +282,13 @@ document.addEventListener('DOMContentLoaded', function () {
             for (var z = 0; z < allRecipes.length; z++) {
               allRecipes[z].id = z;
               localStorage.setItem("recipes", JSON.stringify(allRecipes));
-              window.location.reload(true);
             }
           }else{
             localStorage.setItem("recipes", JSON.stringify(allRecipes));
           }
         }
       }
+      window.location.reload(true);
     })
   }
   //edytowanie przepisu
