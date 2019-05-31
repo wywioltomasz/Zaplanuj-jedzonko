@@ -23,3 +23,100 @@
 @import 'partials/addrecipe';
 
 @import "partials/schedules";
+
+.plan_box {
+  margin: 0 auto;
+  height: 65%;
+  width: 95%;
+  background-color: #FFFFFA;
+  border: 1px dashed #a1a194;
+  position: relative;
+  .previous {
+    position: absolute;
+    bottom: 7%;
+    left: 2%;
+    color: #FF6600;
+    span {
+      font-weight: 900;
+    }
+  }
+  .next {
+    position: absolute;
+    bottom: 7%;
+    right: 2%;
+    color: #FF6600;
+    span {
+      font-weight: 900;
+    }
+  }
+  &_title {
+    text-align: center;
+    font-size: 28.8px;
+    font-weight: 900;
+    color: #FF6600;
+    margin: 15px 0;
+    font-family: Arial, sans-serif;
+
+  }
+  &_grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    height: 70%;
+    width: 90%;
+    margin: 0 auto;
+    grid-gap: 10px;
+    position: relative;
+    font-size: 20px;
+    color: #5B605F;
+    align-items: center;
+    word-break: break-word;
+    .border_box {
+      grid-column: 1/-1;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 102%;
+        height: 2px;
+        background-color: #cbcbcb;
+        left: -2%;
+        top: 0;
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 102%;
+      height: 2px;
+      background-color: #cbcbcb;
+      left: -2%;
+      top: 0;
+    }
+    .title_row {
+      margin-top: 15px;
+      grid-row: 1;
+      grid-column: 1/-1;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: 1fr;
+      position: relative;
+
+      @for $i from 1 through 7 {
+        .day-#{$i} {
+          grid-column: $i;
+          align-self: center;
+          font-size: 1.4rem;
+          word-break: break-all;
+          color: #5B605F;
+          h3 {
+            font-family: Arial, sans-serif;
+          }
+        }
+      }
+    }
+
+
+}
+}
