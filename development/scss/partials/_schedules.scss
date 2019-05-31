@@ -106,15 +106,6 @@
     grid-gap: 20px;
     position: relative;
 
-    &:after {
-      content: '';
-      position: absolute;
-      width: 85%;
-      height: 1px;
-      background-color: #cbcbcb;
-      bottom: 101%;
-      left: 15%;
-    }
     .meal_box {
       grid-column: 2/-1;
       grid-row: 1;
@@ -149,6 +140,29 @@
       color: #5b605f;
       text-transform: uppercase;
       align-items: center;
+      @for $i from 1 through 7 {
+        .day-#{$i} {
+          position: relative;
+          &:after {
+            content: '';
+            position: absolute;
+            width: 635%;
+            height: 2px;
+            background-color: #cbcbcb;
+            bottom: 140%;
+            left: 15%;
+          }
+        }
+        .day-7:before {
+          content: '';
+          position: absolute;
+          width: 635%;
+          height: 2px;
+          background-color: #cbcbcb;
+          top: 140%;
+          left: 15%;
+        }
+      }
     }
     .input_box {
       grid-column: 2/-1;
