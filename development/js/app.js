@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         userName.innerText = localStorage.userName;//zmieniam imię w html na podane przez input
         submitName.parentElement.parentElement.parentElement.removeChild(firstEntry.parentElement);
+        window.location.reload(true);
 
 
       }
