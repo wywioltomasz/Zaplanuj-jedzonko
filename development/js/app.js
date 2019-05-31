@@ -40,4 +40,12 @@ document.addEventListener('DOMContentLoaded', function () {
     app_main.style.display = 'block';
     dashboard.style.display = 'none';
   }
+  //Usuwanie powiadomien widgetow//
+  var close_buttons = document.querySelectorAll('.fa-window-close');
+  for(var i=0; i < close_buttons.length; i++){
+    close_buttons[i].addEventListener('click', function () {
+      this.parentElement.parentElement.removeChild(this.parentElement);
+    })
+  }
+
 });
