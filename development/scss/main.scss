@@ -17,36 +17,3 @@
 @import "partials/footer";
 @import "partials/about";
 @import "partials/dashboard";
-
-.app_content {
-  display: none;
-}
-.widget {
-  width: 90%;
-  margin: 40px auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: red;
-  height: 30%;
-  &__buttons{
-    width: 40%;
-    background-color: black;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  &__add {
-    width: 27%;
-    height: 90%;
-    background-color: blue;
-    margin-right: 40px;
-    display: flex;
-    fa-plus-square{
-      font-size: 30px;
-      color: lawngreen;
-    }
-  }
-
-}

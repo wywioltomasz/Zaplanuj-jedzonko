@@ -1,0 +1,89 @@
+
+.app_content {
+  display: none;
+}
+.widget {
+  width: 90%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30%;
+  &__buttons{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__add {
+    width: 27%;
+    height: 90%;
+    margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px dashed #468966;
+    background-color: #FFFFFA;
+    .fa-plus-square{
+      font-size: 100px;
+      color: #468966;
+    }
+    h3 {
+      color: #468966;
+      font-size: 1.5em;
+      font-weight: 600;
+    ;
+    }
+  }
+  .notes {
+    width: 55%;
+    height: 90%;
+    .note {
+      width: 100%;
+      background-color: #FFFFFA;
+      display: flex;
+      justify-content: space-between;
+      border: 1px dashed;
+      height: 30%;
+      padding: 10px;
+      margin-bottom: 12px;
+      p {
+        font-size: 1.5em;
+        font-weight: 600;
+        margin-left: 30px;
+      }
+      .fa-window-close {
+        font-size: 20px;
+      }
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .note_circle {
+        font-size: 47px;
+      }
+    }
+    .note-info {
+      color: #3498DB;
+      border-color: #3498DB;
+    }
+    .note-reminder {
+      color: #FFB03B;
+      border-color: #FFB03B;
+    }
+    .note-agree {
+      color: #468966;
+      border-color: #468966;
+    }
+  }
+}
+.plan_box {
+  margin: 0 auto;
+  height: 55%;
+  width: 90%;
+  background-color: #FFFFFA;
+  border: 1px dashed black;
+}
