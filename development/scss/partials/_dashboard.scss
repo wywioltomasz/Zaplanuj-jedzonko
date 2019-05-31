@@ -1,7 +1,10 @@
-
-//.app_content {
-//  display: none;
-//}
+.app_content_main {
+  display: none;
+}
+.dashboard {
+  height: 800px;
+  width: 100%;
+}
 .widget {
   width: 90%;
   margin: 40px auto;
@@ -18,7 +21,7 @@
   }
   &__add {
     width: 27%;
-    height: 90%;
+    height: 100%;
     margin-right: 70px;
     display: flex;
     flex-direction: column;
@@ -39,7 +42,7 @@
   }
   .notes {
     width: 55%;
-    height: 90%;
+    height: 100%;
     .note {
       width: 100%;
       background-color: #FFFFFA;
@@ -82,8 +85,8 @@
 }
 .plan_box {
   margin: 0 auto;
-  height: 55%;
+  height: 65%;
   width: 90%;
   background-color: #FFFFFA;
-  border: 1px dashed black;
+  border: 1px dashed #a1a194;
 }

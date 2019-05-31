@@ -3,7 +3,12 @@
     border-bottom: 1px solid #cbcbcb;
   }
 }
-
+.alert-box{
+  width: 510px;
+  height: 28px;
+  color: red;
+  //border: 1px solid #cbcbcb;
+}
 .newrecipe {
   i {
     cursor: pointer;
@@ -45,12 +50,7 @@
       cursor: pointer;
 
     }
-    .alert-box{
-      width: 510px;
-      height: 28px;
-      color: red;
-      //border: 1px solid #cbcbcb;
-    }
+
 
   }
 

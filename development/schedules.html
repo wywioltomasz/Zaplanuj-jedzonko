@@ -45,6 +45,258 @@
         </div>
     </div>
     <div class="background">
+<div class="app_content addschedule">
+      <div class="newschedule">
+        <div class="newschedule_header">
+          <h3 class="app_content_header"> Nowy plan</h3>
+          <span class="alert-box"></span>
+          <button id="save_recipe"> Zapisz i zamknij</button>
+        </div>
+        <div class="container">
+          <div class="schedule_info">
+            <span>Nazwa planu</span>
+            <input id="schedule_name" type="text" size="50" placeholder="Nazwa planu">
+          </div>
+          <div class="schedule_info">
+            <span>Opis planu</span>
+            <textarea id="schedule_description" rows="5" maxlength="360"
+                      placeholder="Krótki opis planu"></textarea>
+          </div>
+          <div class="schedule_info">
+            <span>Numer tygodnia</span>
+            <div class="fix">
+            <input id = "week-num" class="schedule_info_week" type="number" style="width: 5%; padding: 0">
+            </div>
+          </div>
+        </div>
+        <div class="grid_box">
+          <div class="meal_box">
+            <div class="meal-1">
+              <h3>śniadanie</h3>
+            </div>
+            <div class="meal-2">
+              <h3>drugie śniadanie</h3>
+            </div>
+            <div class="meal-3">
+              <h3>zupa</h3>
+            </div>
+            <div class="meal-4">
+              <h3>drugie danie</h3>
+            </div>
+            <div class="meal-5">
+              <h3>kolacja</h3>
+            </div>
+        </div>
+          <div class="day_box">
+            <div class="day-1">
+              <h4>Poniedziałek</h4>
+            </div>
+            <div class="day-2">
+              <h4>Wtorek</h4>
+            </div>
+            <div class="day-3">
+              <h4>Środa</h4>
+            </div>
+            <div class="day-4">
+              <h4>Czwartek</h4>
+            </div>
+            <div class="day-5">
+              <h4>Piątek</h4>
+            </div>
+            <div class="day-6">
+              <h4>Sobota</h4>
+            </div>
+            <div class="day-7">
+              <h4>Niedziela</h4>
+            </div>
+          </div>
+          <div class="input_box">
+            <!-- pon !-->
+            <div class="mon_meal-1">
+              <select name="recipe">
+                <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="mon_meal-2">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="mon_meal-3">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="mon_meal-4">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="mon_meal-5">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <!-- wtorek !-->
+            <div class="tue_meal-1">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="tue_meal-2">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="tue_meal-3">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="tue_meal-4">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="tue_meal-5">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <!-- środa !-->
+            <div class="wen_meal-1">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="wen_meal-2">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="wen_meal-3">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="wen_meal-4">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="wen_meal-5">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <!-- CZW !-->
+            <div class="thu_meal-1">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="thu_meal-2">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="thu_meal-3">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="thu_meal-4">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="thu_meal-5">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <!-- PT !-->
+            <div class="fri_meal-1">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="fri_meal-2">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="fri_meal-3">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="fri_meal-4">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="fri_meal-5">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <!-- sobota !-->
+            <div class="sat_meal-1">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="sat_meal-2">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="sat_meal-3">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="sat_meal-4">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="sat_meal-5">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <!-- niedziela !-->
+            <div class="sun_meal-1">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="sun_meal-2">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="sun_meal-3">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="sun_meal-4">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+            <div class="sun_meal-5">
+              <select name="recipe">
+                  <option value="defaultRecipeCheck">Wybierz danie</option>
+              </select>
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
 
         <div class="app_content schedules">     <!--kontener zawartości w aplikacji-->
             <div class="title">

@@ -203,10 +203,10 @@ document.addEventListener('DOMContentLoaded', function () {
           default:
 
                 //****************************Zapisywanie informacji o nowym przepisie**********************
-                for (var i = 0; i < instructions.length; i++) {
+                for (let i = 0; i < instructions.length; i++) {
                     newRecipe.instructions.push(instructions[i].innerText);
                 }
-                for (var i = 0; i < ingredients.length; i++) {
+                for (let i = 0; i < ingredients.length; i++) {
                     newRecipe.ingredients.push(ingredients[i].innerText);
                 }
 
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // ***************************************Dodawanie przepisu do localStorage*****************
 
 
-                saveRecipeToLocalStorage(newRecipe);
+                saveToLocalStorage(newRecipe,"recipes");
                 //console.log(typeof allRecipes);
 
                 alertBox.innerHTML = null;
@@ -244,21 +244,22 @@ document.addEventListener('DOMContentLoaded', function () {
               clone.querySelector('.id').innerText = newRecipe.id + 1;
               clone.querySelector('.name').innerText = newRecipe.title;
               clone.querySelector('.description').innerText = newRecipe.description;
+
               entry_box.appendChild(clone);
               window.location.reload(true);
         }
 
 
     });
-    function saveRecipeToLocalStorage(recipe) {
+    function saveToLocalStorage(array, key) {
         var dataFromLocalStorage = [];
-        if (localStorage.getItem("recipes") !== null) {
-            dataFromLocalStorage = JSON.parse(localStorage.getItem("recipes"));
-            dataFromLocalStorage.push(recipe);
-            localStorage.setItem("recipes", JSON.stringify(dataFromLocalStorage));
+        if (localStorage.getItem(key) !== null) {
+            dataFromLocalStorage = JSON.parse(localStorage.getItem(key));
+            dataFromLocalStorage.push(array);
+            localStorage.setItem(key, JSON.stringify(dataFromLocalStorage));
         } else {
-            dataFromLocalStorage.push(recipe);
-            localStorage.setItem("recipes", JSON.stringify(dataFromLocalStorage));
+            dataFromLocalStorage.push(array);
+            localStorage.setItem(key, JSON.stringify(dataFromLocalStorage));
         }
     }
     //Zapisuje wszystkie przepisy w liscie przepisow.
