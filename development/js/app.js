@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         userName.innerText = localStorage.userName;//zmieniam imię w html na podane przez input
         submitName.parentElement.parentElement.removeChild(firstEntry);
+        window.location.reload(true);
 
 
       }
@@ -32,5 +33,12 @@ document.addEventListener('DOMContentLoaded', function () {
   } else {
     userName.innerText = localStorage.userName;
     submitName.parentElement.parentElement.removeChild(firstEntry);
+  }
+  if(localStorage.getItem('userName') === null )
+  {
+    var app_main = document.querySelector('.app_content_main');
+    var dashboard = document.querySelector('.dashboard');
+    app_main.style.display = 'block';
+    dashboard.style.display = 'none';
   }
 });
