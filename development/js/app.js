@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
   if (localStorage.getItem('userName') === null) {
 
     submitName.addEventListener('click', function (event) {
-      console.log('klik');
       if (inputName.value !== '') {                                               //jeśli coś jest w inpucie
 
         localStorage.setItem('userName', inputName.value);                  //dodaję do local storage imię pod nazwą userName
@@ -18,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         inputName.value = null;
 
         userName.innerText = localStorage.userName;//zmieniam imię w html na podane przez input
-        submitName.parentElement.parentElement.removeChild(firstEntry);
+        submitName.parentElement.parentElement.parentElement.removeChild(firstEntry.parentElement);
 
 
       }
@@ -31,6 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   } else {
     userName.innerText = localStorage.userName;
-    submitName.parentElement.parentElement.removeChild(firstEntry);
+    submitName.parentElement.parentElement.parentElement.removeChild(firstEntry.parentElement);
   }
 });

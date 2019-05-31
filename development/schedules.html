@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Zaplanuj Jedzonko</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/schedules.js"></script>
+</head>
+<body>
+<header>
+    <a href="index.html">
+        <div class="main_logo">
+            <h1>
+                <span class="first">Zaplanuj</span>
+                <span class="second">Jedzonko</span>
+            </h1>
+        </div>
+    </a>
+    <div class="main_login">
+        <h3 class="user_name">Imię</h3>
+        <span class="user_icon"><i class="fas fa-user-circle"></i></span>
+    </div>
+</header>
+<section>
+    <div class="left_side_nav">
+        <div class="nav_box">
+            <span class="orange_sideline"></span>
+            <a href="app.html"><button class="button">Pulpit<span class="arrow">&#x203A</span></button></a>
+        </div>
+        <div class="nav_box">
+            <span class="orange_sideline"></span>
+            <a href="recipes.html"><button class="button">Przepisy<span class="arrow">&#x203A</span></button></a>
+        </div>
+        <div class="nav_box nav_box_schedules">
+            <span class="orange_sideline"></span>
+            <button class="button">Plany<span class="arrow">&#x203A</span></button>
+        </div>
+        <div class="nav_box">
+            <span class="orange_sideline"></span>
+            <button class="button">Lista zakupów<span class="arrow">&#x203A</span></button>
+        </div>
+    </div>
+    <div class="background">
+
+        <div class="app_content recipes">     <!--kontener zawartości w aplikacji-->
+            <div class="title">
+                <h2>Lista planów</h2>
+                <i class="title__plus fas fa-plus-square"></i>
+            </div>
+            <div class="recipe__list">
+                <div class="list__header">
+                    <div class="id">Id</div>
+                    <div class="name">nazwa</div>
+                    <div class="description">opis</div>
+                    <div class ="week">tydzień</div>
+                    <div class="action">akcje</div>
+                </div>
+                <div class="entry__box">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+</body>
+</html>
