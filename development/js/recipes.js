@@ -264,7 +264,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     //Zapisuje wszystkie przepisy w liscie przepisow.
   for(var i = 0; i < allRecipes.length; i++){
-console.log(allRecipes)
     var clone = new_entry.cloneNode(true);
     clone.querySelector('.id').innerText = allRecipes[i].id + 1;
     clone.querySelector('.name').innerText = allRecipes[i].title;
@@ -319,5 +318,9 @@ console.log(allRecipes)
     recipes.style.display = 'none';
     localStorage.removeItem('widget');
   }
+
+  var recipe_leng = allRecipes.length;
+  localStorage.setItem('recipe_leng', recipe_leng);
+  console.log(localStorage.getItem('recipe_leng'))
 });
 

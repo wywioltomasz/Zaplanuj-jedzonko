@@ -52,6 +52,25 @@ document.addEventListener('DOMContentLoaded', function () {
   widget_recipe.addEventListener('click', function () {
     localStorage.setItem('widget', 'clicked');
     window.location.href = 'recipes.html';
-  })
+  });
+  var widget_schedule = document.querySelector('.widget_add_schedule');
+
+  widget_schedule.addEventListener('click', function () {
+    localStorage.setItem('widget', 'clicked');
+    window.location.href = 'schedules.html';
+  });
+  var note_info_text = document.querySelector('.note_info_text');
+  var recipes_lenght = localStorage.getItem("recipe_leng");
+  var widget_recipe_num = document.querySelector('.recipe_leng');
+  if(recipes_lenght === "0"){
+    note_info_text.innerHTML = "Nie masz wcale przepisów!";
+  }else if(recipes_lenght === '1') {
+    widget_recipe_num.innerHTML = '1 przepis';
+  }else if(recipes_lenght === '2' || recipes_lenght === '3' || recipes_lenght === '4') {
+    widget_recipe_num.innerHTML = recipes_lenght + ' przepisy';
+    console.log('dzia')
+  }else{
+    widget_recipe_num.innerHTML = recipes_lenght + ' przepisów';
+  }
 
 });

@@ -203,6 +203,19 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem(key, JSON.stringify(dataFromLocalStorage));
         }
     }
+    var addschedule = document.querySelector('.addschedule');
+    var schedules = document.querySelector('.schedules');
+
+  if(localStorage.getItem('widget') === 'clicked') {
+    addschedule.style.display = 'block';
+    schedules.style.display = 'none';
+    localStorage.removeItem('widget');
+  }
+  var schedule_navi = document.querySelector('.nav_box_schedules');
+  schedule_navi.addEventListener('click', function () {
+    window.location.reload(true);
+  })
+
 
 });
 
