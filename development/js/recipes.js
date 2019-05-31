@@ -303,5 +303,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   document.querySelector('.user_name').innerHTML = localStorage.getItem('userName');
 
+  console.log(localStorage.getItem('widget'));
+  if(localStorage.getItem('widget') === 'clicked') {
+    addRecipe.style.display = 'block';
+    recipes.style.display = 'none';
+    localStorage.removeItem('widget');
+  }
 });
 

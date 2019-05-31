@@ -47,5 +47,11 @@ document.addEventListener('DOMContentLoaded', function () {
       this.parentElement.parentElement.removeChild(this.parentElement);
     })
   }
+  var widget_recipe = document.querySelector('.widget_add_recipe');
+  console.log(widget_recipe);
+  widget_recipe.addEventListener('click', function () {
+    localStorage.setItem('widget', 'clicked');
+    window.location.href = 'recipes.html';
+  })
 
 });
