@@ -109,6 +109,9 @@ document.addEventListener('DOMContentLoaded', function () {
             case searchMealDefault(selects):
                 alertBox.innerText = "Wybierz dania";
                 break;
+            case searchWeekDuplicate(allSchedules):
+                alertBox.innerText = "Masz już plan na ten tydzień";
+                break;
             default:
                 alertBox.innerText = null;
 
@@ -131,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 window.location.reload(true);
 
-                /***************czyszczenie********************/
+                //***************czyszczenie********************/
                 var inputsAndSelects = document.querySelectorAll('.addschedule input, .addschedule textarea, .addschedule select');
 
                 for(let i = 0; i<inputsAndSelects.length;i++){
@@ -204,5 +207,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function searchWeekDuplicate(allSchedules){
+
+        let weekCheck = 0;
+        for(let i = 0; i<allSchedules.length;i++){
+            if(allSchedules[i].week == weekNumber.value){
+                weekCheck++
+            }
+        }
+        return weekCheck > 0
+    }
 });
 
