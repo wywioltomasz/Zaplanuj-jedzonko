@@ -264,21 +264,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     //Zapisuje wszystkie przepisy w liscie przepisow.
   for(var i = 0; i < allRecipes.length; i++){
-
     var clone = new_entry.cloneNode(true);
     clone.querySelector('.id').innerText = allRecipes[i].id + 1;
     clone.querySelector('.name').innerText = allRecipes[i].title;
     clone.querySelector('.description').innerText = allRecipes[i].description;
     entry_box.appendChild(clone);
-    console.log(clone.querySelector('.bin'));
-
     //Usuwanie przepisu z listy
 
     clone.querySelector('.bin').addEventListener('click', function () {
       console.log(this.parentElement.parentElement.parentElement);
       this.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement);
       var del_id = this.parentElement.parentElement.querySelector('.id').innerText - 1;
-      console.log(del_id);
       for(var j=0; j < allRecipes.length; j++) {
         if(del_id === allRecipes[j].id){
           allRecipes.splice(j, 1);
@@ -286,15 +282,28 @@ document.addEventListener('DOMContentLoaded', function () {
             for (var z = 0; z < allRecipes.length; z++) {
               allRecipes[z].id = z;
               localStorage.setItem("recipes", JSON.stringify(allRecipes));
-              window.location.reload(true);
             }
           }else{
             localStorage.setItem("recipes", JSON.stringify(allRecipes));
           }
         }
       }
+      window.location.reload(true);
     })
   }
+  //edytowanie przepisu
+  var recipe_edit = document.querySelectorAll('.edit');
+  for(var i = 0; i < recipe_edit.length; i++)
+    recipe_edit[i].addEventListener('click', function () {
+      addRecipe.style.display = 'block';
+      recipes.style.display = 'none';
+      console.log(this.parentElement.parentElement);
+      document.querySelector('#recipe_name').value = this.parentElement.parentElement.querySelector('.name').innerHTML;
+      document.querySelector('#recipe_description').value = this.parentElement.parentElement.querySelector('.description').innerHTML;
+
+
+  });
+
   var nav_recipes = document.querySelector('.nav_box_recipes');
   nav_recipes.addEventListener('click', function () {
     window.location.reload(true);
@@ -304,11 +313,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   document.querySelector('.user_name').innerHTML = localStorage.getItem('userName');
 
-  console.log(localStorage.getItem('widget'));
   if(localStorage.getItem('widget') === 'clicked') {
     addRecipe.style.display = 'block';
     recipes.style.display = 'none';
     localStorage.removeItem('widget');
   }
+
+  var recipe_leng = allRecipes.length;
+  localStorage.setItem('recipe_leng', recipe_leng);
 });
 

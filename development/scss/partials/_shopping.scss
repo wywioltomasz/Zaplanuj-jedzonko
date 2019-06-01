@@ -1,0 +1,41 @@
+
+.shopping_box {
+  width: 60%;
+  height: 60%;
+  margin: 130px auto;
+  background-image: url("https://s-media-cache-ak0.pinimg.com/736x/ac/d6/2b/acd62b8bd713934d8a360b12375dba6d.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.nav_box_shopping .button {
+  background-color: #292F32;
+  border-left: 7px solid #E58A20;
+  position: relative;
+}
+.shopping_box {
+  -webkit-animation: appear 2s linear 0s infinite normal both;
+  animation: appear 2s linear 0s infinite normal both;
+}
+@-webkit-keyframes appear {
+  0%{
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  60%{
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+  }
+}
+
+@keyframes appear {
+  0%{
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  60%{
+    opacity: 1;
+    transform: scale3d(1,1,1);
+  }
+}
