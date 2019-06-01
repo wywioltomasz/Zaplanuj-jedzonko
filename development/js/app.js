@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var planBoxTitle = document.querySelector('.plan_box_title');
     var planBoxGrid = document.querySelector('.plan_box_grid');
     var borderBox = document.querySelector('.border_box');
-    var listedMeals = []
+    var listedMeals = [];
     var weekID = document.querySelector('.week_id');
 
     var schedules = JSON.parse(localStorage.getItem('schedules'));

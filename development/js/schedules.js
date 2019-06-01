@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
     for (let i = 0; i < selects.length; i++) {
         for (let j = 0; j < allRecipes.length; j++) {
             let newOption = document.createElement('OPTION');
-            newOption.innerText = allRecipes[j].id +'. '+ allRecipes[j].title;
+            newOption.innerText = (Number(allRecipes[j].id) +1) +'. '+ allRecipes[j].title;
             selects[i].appendChild(newOption);
         }
 
