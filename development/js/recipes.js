@@ -302,8 +302,9 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('#recipe_description').value = this.parentElement.parentElement.querySelector('.description').innerHTML;
 
 
-  });
 
+  });
+  
   var nav_recipes = document.querySelector('.nav_box_recipes');
   nav_recipes.addEventListener('click', function () {
     window.location.reload(true);
