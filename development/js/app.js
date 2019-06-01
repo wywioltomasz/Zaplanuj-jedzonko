@@ -79,15 +79,14 @@ document.addEventListener('DOMContentLoaded', function () {
     var planBoxTitle = document.querySelector('.plan_box_title');
     var planBoxGrid = document.querySelector('.plan_box_grid');
     var borderBox = document.querySelector('.border_box');
-    var listedMeals = []
+    var listedMeals = [];
     var weekID = document.querySelector('.week_id');
 
     var schedules = JSON.parse(localStorage.getItem('schedules'));
 
     var schedulesSortedByWeek = [];
 
-    // console.log(schedules)
-    if (schedules != null) {
+    if (schedules !== null) {
         schedulesSortedByWeek = getSchedules(schedules);
         weekID.innerText = schedulesSortedByWeek[0].week + ' ';
         var currentSchedule = schedulesSortedByWeek[0];
@@ -112,35 +111,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         }
+        if(schedules.length > 1) {
 
-
-        previous.addEventListener('click', function (event) {
+          previous.addEventListener('click', function (event) {
 
             currentSchedule = findPrevSchedule(schedulesSortedByWeek);
             weekID.innerText = currentSchedule.week;
-
             for (let i = 0; i < listedMeals.length; i++) {
-                listedMeals[i].innerText = currentSchedule.meals[i];
+              listedMeals[i].innerText = currentSchedule.meals[i];
 
 
             }
 
 
+          });
 
-
-        });
-        next.addEventListener('click', function (event) {
+          next.addEventListener('click', function (event) {
             currentSchedule = findNextSchedule(schedulesSortedByWeek);
             weekID.innerText = currentSchedule.week;
 
             for (let i = 0; i < listedMeals.length; i++) {
-                listedMeals[i].innerText = currentSchedule.meals[i];
+              listedMeals[i].innerText = currentSchedule.meals[i];
 
 
             }
 
 
-        });
+          });
+        }else{
+          next.style.cursor = 'not-allowed';
+          previous.style.cursor = 'not-allowed';
+        }
 
 
     } else {
