@@ -85,8 +85,9 @@
   }
 }
 .plan_box {
-  margin: 0 auto;
+  margin: 0 auto 30px;
   width: 95%;
+  height: auto;
   background-color: #FFFFFA;
   border: 1px dashed #a1a194;
   position: relative;
@@ -122,7 +123,7 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    height: 70%;
+    height: auto;
     width: 90%;
     margin: 0 auto;
     grid-gap: 10px;
