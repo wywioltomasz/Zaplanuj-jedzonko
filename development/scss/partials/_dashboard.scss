@@ -20,6 +20,7 @@
     align-items: center;
   }
   &__add {
+    cursor: pointer;
     width: 27%;
     height: 100%;
     margin-right: 70px;
@@ -89,9 +90,9 @@
   background-color: #FFFFFA;
   border: 1px dashed #a1a194;
   position: relative;
+  padding-bottom: 3%;
   .previous {
     position: absolute;
-    bottom: 7%;
     left: 2%;
     color: #FF6600;
     cursor: pointer;
@@ -101,7 +102,6 @@
   }
   .next {
     position: absolute;
-    bottom: 7%;
     right: 2%;
     color: #FF6600;
     cursor: pointer;
@@ -121,7 +121,7 @@
   &_grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     height: 70%;
     width: 90%;
     margin: 0 auto;
@@ -130,6 +130,7 @@
     font-size: 20px;
     color: #5B605F;
     align-items: center;
+    padding-bottom: 15px;
     word-break: break-word;
     .border_box {
       grid-column: 1/-1;

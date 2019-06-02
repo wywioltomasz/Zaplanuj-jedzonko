@@ -58,6 +58,10 @@ document.addEventListener('DOMContentLoaded', function () {
     localStorage.setItem('widget', 'clicked');
     window.location.href = 'schedules.html';
   });
+  var widget_shopping = document.querySelector('.widget_add_shopping');
+  widget_shopping.addEventListener('click', function () {
+    window.location.href = 'shopping.html';
+  })
   var note_info_text = document.querySelector('.note_info_text');
   var recipes_lenght = localStorage.getItem("recipe_leng");
   var widget_recipe_num = document.querySelector('.recipe_leng');
