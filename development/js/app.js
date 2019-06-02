@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var note_info_text = document.querySelector('.note_info_text');
   var recipes_lenght = localStorage.getItem("recipe_leng");
   var widget_recipe_num = document.querySelector('.recipe_leng');
-  if(recipes_lenght === "0"){
+  if(recipes_lenght === "0" || recipes_lenght === null){
     note_info_text.innerHTML = "Nie masz przepisów!";
   }else if(recipes_lenght === '1') {
     widget_recipe_num.innerHTML = '1 przepis';
@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var schedules = JSON.parse(localStorage.getItem('schedules'));
 
     var schedulesSortedByWeek = [];
+    console.log(schedules);
 
     if (schedules !== null) {
         schedulesSortedByWeek = getSchedules(schedules);
